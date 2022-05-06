@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: hsla(240, 5%, 7%, 1);
+}
+#timer, #buttons, footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#timer span {
+  font-size: 88px;
+  line-height: 103px;
+  text-align: center;
+  color: #FFFFFF;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
