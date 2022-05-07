@@ -4,27 +4,60 @@
   box-sizing: border-box;
 }
 :root {
+  --bg-color: hsla(240, 5%, 7%, 1);
+  --base-color: 194;
+  --primary-color: hsla(var(--base-color), 100%, 63%, 1);
+  --secondy-color: hsla(var(--base-color), 100%, 63%, 0.13);
+  --text-color: #FFF;
+
   font-size: 62.5%;
 }
 
 body{
   font-family: 'Roboto', sans-serif;
-  background-color: hsla(240, 5%, 7%, 1);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: grid;
+
 }
-#timer, #buttons, footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
+main{
+  justify-self: center;
+  align-self: end;
 }
 
-#timer span {
-  font-size: 88px;
-  line-height: 103px;
+#timer {
   text-align: center;
-  color: #FFFFFF;
+  margin-bottom: 1.6rem;
+  font-size: clamp(4rem, 4rem + 10vw, 6.4rem);
+  color: var(--text-color);
+}
+.hide {
+  display: none;
+}
+.play svg path, .pause svg path, .sound-on svg path{
+  fill: var(--primary-color);
 }
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+button svg {
+  width: clamp(3.2rem , 2rem + 12vw , 6.4rem);
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:3.2rem;
+  background: var(--secondy-color);
+  width: clamp(10rem, 10rem + 30vw ,22.8rem);
+  height: clamp( 8rem, 5rem + 10vw ,10.8rem);
+  border-radius: 9999px;
+}
+footer{
+  align-self: end;
+  justify-self: end;
+  padding: 0 4rem 3.2rem 0 ;
 }
