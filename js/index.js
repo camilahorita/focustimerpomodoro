@@ -64,4 +64,5 @@ buttonSet.addEventListener('click', function(){
   console.log(newMinutes)
   minutes = newMinutes;
   timer.updateDisplay(minutes, 0);
+  timer.updateMinutes(minutes, 0)
 })

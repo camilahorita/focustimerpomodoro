@@ -38,7 +38,7 @@ export default function Timer ({
 
     }, 1000)
 
-    function updateMinutes(){
+    function updateMinutes(newMinutes){
       minutes = newMinutes;
     }
   }
@@ -46,7 +46,8 @@ export default function Timer ({
   return{
     countdown,
     reset,
-    updateDisplay
-    
+    updateDisplay,
+    updateMinutes
+
   }
 }
